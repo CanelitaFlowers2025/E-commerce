@@ -1,0 +1,235 @@
+/* --- Importaciones de fuentes y estilos generales de tu proyecto --- */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Fredoka:wght@300..700&display=swap');
+
+*{  
+    padding: 0;
+    font-family: "Fredoka", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../recursos/imagenes/Background1.jpg"); /* Ruta relativa ajustada para CSS */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #4A4A4A; /* Color de texto general para el cuerpo */
+    line-height: 1.8; /* Aumentado para mejor legibilidad */
+    font-size: 1.15rem; /* Tamaño base de la fuente un poco más grande */
+}
+
+/* --- Estilos del encabezado y navegación (manteniendo tamaño original para la navegación) --- */
+.Line1{
+    display: flex;
+    background-color: #838abd;
+    font-family: "Dancing Script", cursive;
+    font-size: 2.2em;
+    color: #4A4A4A;
+    justify-content: center;
+    padding: 15px 0;
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.Line1 img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.cabeza-global {
+    background-color: #FBE3D6;
+    padding: 2px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-item .nav-link.myButton {
+    background-color: #FBE3D6;
+    border: none;
+    font-size: 1rem; /* Tamaño original para los botones de navegación */
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: #CC66FF;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.nav-item .nav-link.myButton:hover {
+    background-color: #CC66FF;
+    color: #FBE3D6;
+    font-size: 1.05rem;
+    transform: translateY(-2px);
+}
+
+.nav-item .nav-link.active.myButton {
+    color: #CC66FF;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.user-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user-icons .myButton {
+    background-color: transparent;
+    border: none;
+    color: #CC66FF;
+    font-size: 1.4rem; /* Tamaño para los íconos de usuario */
+    padding: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.user-icons .myButton:hover {
+    background-color: transparent;
+    color: #8A4F7D;
+    transform: scale(1.1);
+}
+
+/* Estilos para la barra de búsqueda */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 20px;
+}
+
+#product-search {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 1em; /* Tamaño de fuente para la barra de búsqueda */
+}
+
+/* --- Estilos compartidos de las secciones (fondo 100%, contenido 90%) --- */
+
+/* Contenedores de sección para el fondo al 100% */
+.about-hero-section,
+.about-section {
+    width: 100%; /* Ocupa el 100% del ancho de la ventana */
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco (o casi blanco) */
+    padding: 60px 0; /* Solo padding vertical, el horizontal lo dará el .content-wrapper */
+    margin-top: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border-radius: 10px; /* Bordes redondeados para la caja completa */
+}
+
+/* Contenedor interno para limitar el ancho del contenido y centrarlo */
+.content-wrapper {
+    max-width: 1200px; /* Ancho máximo para el contenido (90% percibido) */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 0 30px; /* Márgenes laterales razonables */
+}
+
+.about-hero-section .content-wrapper {
+    padding: 0 30px;
+    text-align: center;
+}
+
+.about-hero-section h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 4.5em; /* Título principal grande */
+    color: #8A4F7D;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.about-hero-section p {
+    font-size: 1.6rem; /* Texto principal del hero, muy visible */
+    line-height: 1.9;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+.section-title {
+    font-family: "Fredoka", sans-serif;
+    font-size: 3em; /* Títulos de sección más grandes */
+    color: #CC66FF;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background-color: #FBE3D6;
+}
+
+/* --- Estilos específicos de la página Contact Us --- */
+
+/* Estilos para el formulario de contacto */
+.contact-form-section {
+    padding-bottom: 60px; /* Asegura espacio después del formulario */
+}
+
+.contact-form {
+    max-width: 700px; /* Limita el ancho del formulario */
+    margin: 0 auto; /* Centra el formulario */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.contact-form .form-label {
+    font-size: 1.15rem; /* Tamaño de letra para las etiquetas del formulario */
+    font-weight: bold;
+    color: #8A4F7D; /* Color de tus títulos */
+    margin-bottom: 8px;
+}
+
+.contact-form .form-control {
+    font-size: 1.1rem; /* Tamaño de letra para los campos de entrada */
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    border-color: #CC66FF; /* Color de foco */
+    box-shadow: 0 0 0 0.25rem rgba(204, 102, 255, 0.25); /* Sombra de foco */
+    outline: none;
+}
+
+.contact-form textarea.form-control {
+    resize: vertical; /* Permite redimensionar verticalmente el área de texto */
+}
+
+.contact-form .submit-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.25rem; /* Tamaño de letra del botón */
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #CC66FF; /* Color de tu marca */
+    color: #FBE3D6;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form .submit-button:hover {
+    background-

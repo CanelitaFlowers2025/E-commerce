@@ -1,0 +1,409 @@
+/* --- Importaciones de fuentes y estilos generales de tu proyecto --- */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Fredoka:wght@300..700&display=swap');
+
+*{  
+    padding: 0;
+    font-family: "Fredoka", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-image: url("../recursos/imagenes/Background1.jpg"); /* Ruta relativa ajustada para CSS */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #4A4A4A; /* Color de texto general para el cuerpo */
+    line-height: 1.8; /* Aumentado para mejor legibilidad */
+    font-size: 2rem; /* Tamaño base de la fuente un poco más grande */
+}
+
+/* --- Estilos del encabezado y navegación --- */
+.Line1{
+    display: flex;
+    background-color: #838abd;
+    font-family: "Dancing Script", cursive;
+    font-size: 2.2em; /* Un poco más grande */
+    color: #4A4A4A;
+    justify-content: center;
+    padding: 15px 0; /* Más padding vertical para el logo */
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.Line1 img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.cabeza-global {
+    background-color: #FBE3D6;
+    padding: 2px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-item .nav-link.myButton {
+    background-color: #FBE3D6;
+    border: none;
+    font-size: 1.15rem; /* Ligeramente más grande */
+    padding: 12px 22px;
+    border-radius: 15px;
+    color: #CC66FF;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.nav-item .nav-link.myButton:hover {
+    background-color: #CC66FF;
+    color: #FBE3D6;
+    font-size: 1.25rem; /* Un poco más grande al pasar el ratón */
+    transform: translateY(-2px);
+}
+
+.nav-item .nav-link.active.myButton {
+    color: #CC66FF;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.user-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user-icons .myButton {
+    background-color: transparent;
+    border: none;
+    color: #CC66FF;
+    font-size: 1.7rem; /* Íconos un poco más grandes */
+    padding: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.user-icons .myButton:hover {
+    background-color: transparent;
+    color: #8A4F7D;
+    transform: scale(1.1);
+}
+
+/* Estilos para la barra de búsqueda */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 20px;
+}
+
+#product-search {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 280px;
+    font-size: 1.rem; /* Fuente ligeramente más grande */
+}
+
+/* --- Estilos específicos de la página About Us --- */
+
+/* Contenedores de sección para el fondo al 100% */
+.about-hero-section,
+.about-section {
+    width: 100%; /* Ocupa el 100% del ancho de la ventana */
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco (o casi blanco) */
+    padding: 60px 0; /* Solo padding vertical, el horizontal lo dará el .content-wrapper */
+    margin-top: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border-radius: 10px; /* Bordes redondeados para la caja completa */
+}
+
+/* Contenedor interno para limitar el ancho del contenido y centrarlo */
+.content-wrapper {
+    max-width: 1200px; /* Ancho máximo para el contenido (90% percibido) */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 0 30px; /* Márgenes laterales razonables */
+}
+
+.about-hero-section .content-wrapper {
+    padding: 0 30px; /* Asegura el padding para el hero también */
+    text-align: center; /* Centrar el texto del hero */
+}
+
+
+.about-hero-section h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 4.5em; /* Título principal aún más grande */
+    color: #8A4F7D;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Sombra de texto sutil */
+}
+
+.about-hero-section p {
+    font-size: 1.6rem;
+    line-height: 1.9;
+    color: #555;
+    max-width: 900px; /* Limitar ancho del párrafo para legibilidad */
+    margin: 0 auto 20px; /* Centrar el párrafo */
+}
+
+.section-title {
+    font-family: "Fredoka", sans-serif;
+    font-size: 3rem; /* Títulos de sección más grandes */
+    color: #CC66FF;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 120px; /* Línea un poco más larga */
+    height: 4px;
+    background-color: #FBE3D6;
+}
+
+/* Estilos para la sección "Our Story" */
+.our-story-section p {
+    font-size: 1.35rem; /* Texto de la historia aún más grande */
+    line-height: 2; /* Mayor interlineado para legibilidad */
+    text-align: justify;
+    margin-bottom: 25px;
+    color: #333; /* Color de texto ligeramente más oscuro para mayor contraste */
+}
+
+.our-story-section .about-image {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease;
+}
+
+.our-story-section .about-image:hover {
+    transform: scale(1.03) translateY(-5px);
+}
+
+/* Estilos para la sección "Nuestros Fundadores" */
+
+
+.founder-content-wrapper { /* Contenedor para la imagen y el texto del fundador */
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Más espacio entre imagen y texto */
+    padding: 30px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    justify-content: center; /* Centra el contenido si se envuelve */
+}
+
+.founder-image-container {
+    flex-shrink: 0;
+    width: 300px; /* Ancho fijo para el contenedor de la imagen */
+    height: 300px; /* Altura fija para el contenedor de la imagen */
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.25); /* Sombra más fuerte */
+    border: 6px solid #CC66FF; /* Borde más pronunciado */
+    order: 1; /* Por defecto, la imagen primero */
+}
+
+.founder-text-content {
+    flex-grow: 1;
+    max-width: 650px; /* Limita el ancho del texto para legibilidad */
+    text-align: left;
+    order: 2; /* Por defecto, el texto segundo */
+}
+
+/* Para alternar el orden de imagen y texto en futuras secciones de fundadores */
+.founders-section:nth-child(even) .founder-content-wrapper .founder-image-container {
+    order: 2; /* Para que la imagen vaya a la derecha en secciones pares */
+}
+.founders-section:nth-child(even) .founder-content-wrapper .founder-text-content {
+    order: 1; /* Para que el texto vaya a la izquierda en secciones pares */
+}
+
+
+.founder-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.founder-text-content h3 {
+    font-size: 1.35rem; /* Título del fundador más grande */
+    color: #8A4F7D;
+    margin-bottom: 10px;
+}
+
+.founder-text-content .founder-role {
+    font-size: 1.35rem; /* Rol del fundador más grande */
+    color: #CC66FF;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.founder-text-content p{
+    font-size: 1.35rem ; 
+    line-height: 2; /* Ligeramente más alto para mejor legibilidad */
+    color: #555;
+    text-align: justify;
+    margin-bottom: 1.2rem; /* Añade un pequeño margen inferior entre párrafos */
+}
+
+/* Estilos para la sección de agradecimiento */
+.thank-you-section p.thank-you-text { /* Apuntar directamente a la clase para el tamaño */
+    font-size: 1.35rem; /* Texto de agradecimiento más grande (en rem) */
+    line-height: 2;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 800px; /* Limitar el ancho del párrafo */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.image-gallery .gallery-image {
+    max-width: 48%; /* Ajustado para que quepan bien dos, con gap */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-gallery .gallery-image:hover {
+    transform: scale(1.06) rotate(2deg);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Estilos del footer */
+.footer {
+    background-color: #838abd;
+    color: white;
+    margin-top: 70px;
+    padding: 30px 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #fbe3d6;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 992px) {
+    .Line1 img {
+        height: 150px; /* Reducir logo en tablets */
+    }
+    .about-hero-section h1 {
+        font-size: 3.5em;
+    }
+    .about-hero-section p {
+        font-size: 1.3rem;
+    }
+    .section-title {
+        font-size: 2.5em;
+    }
+    .founder-content-wrapper {
+        flex-direction: column; /* Apila imagen y texto en pantallas medianas */
+        text-align: center; /* Centra el texto cuando se apila */
+        gap: 20px;
+    }
+    .founder-image-container,
+    .founder-text-content {
+        order: initial !important; /* Resetea el orden para que la imagen siempre esté arriba */
+    }
+    .founder-text-content {
+        max-width: 100%;
+        text-align: center;
+    }
+    .founder-image-container {
+        width: 250px;
+        height: 250px;
+    }
+    .founder-text-content h3 {
+        font-size: 2.2em;
+    }
+    .founder-text-content .founder-role {
+        font-size: 1.2rem;
+    }
+    .founder-text-content p {
+        font-size: 1.1rem;
+    }
+    .thank-you-section p.thank-you-text {
+        font-size: 1.3rem;
+    }
+    .image-gallery .gallery-image {
+        max-width: 80%; /* Un poco más de margen en tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .Line1 img {
+        height: 120px; /* Reducir logo en móviles */
+    }
+    .about-hero-section,
+    .about-section {
+        padding: 40px 0; /* Ajusta el padding vertical para móviles */
+        margin-top: 20px;
+    }
+    .content-wrapper {
+        padding: 0 15px; /* Más margen en los lados para móviles */
+    }
+    .about-hero-section h1 {
+        font-size: 2.8em;
+    }
+    .about-hero-section p {
+        font-size: 1.1rem;
+    }
+    .section-title {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    .our-story-section p,
+    .founder-text-content p {
+        font-size: 1.05rem; /* Texto más pequeño en móviles */
+        line-height: 1.7;
+    }
+    .founder-image-container {
+        width: 200px;
+        height: 200px;
+    }
+    .founder-text-content h3 {
+        font-size: 1.8em;
+    }
+    .founder-text-content .founder-role {
+        font-size: 1rem;
+    }
+    .thank-you-section p.thank-you-text {
+        font-size: 1.15rem;
+    }
+    .image-gallery .gallery-image {
+        max-width: 95%; /* Las imágenes de la galería ocupan casi todo el ancho en móviles */
+    }
+}

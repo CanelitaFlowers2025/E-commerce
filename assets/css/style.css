@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Fredoka:wght@300..700&display=swap');
+
+/* Reglas universales */
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fredoka", sans-serif;
+    
+
+}
+
+body{
+    background-image: url("./recursos/imagenes/Background1.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/* Estilos para el contenedor del logo */
+.Line1{
+    display: flex;
+    background-color: #838abd;
+    font-family: "Dancing Script", cursive;
+    font-size: 2em;
+    color: #4A4A4A;
+    justify-content: center;
+    padding: 0px;
+    margin-top: 0px;
+    text-decoration: none;
+    
+}
+
+/* ---------------------------------------------------- */
+/* ESTILOS PARA LA BARRA DE NAVEGACIÓN Y LOS BOTONES MYBUTTON */
+/* ---------------------------------------------------- */
+
+/* Ajustes generales para el navbar-nav (el UL) */
+.navbar-nav {
+    list-style: none; /* Elimina las viñetas */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Asegura que los LI estén horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos de navegación */
+    gap: 15px; /* Espacio entre los elementos de navegación */
+}
+
+/* Estilos para los enlaces de navegación con la clase myButton */
+/* Esta es la CLAVE: para sobrescribir */
+
+.nav-item .nav-link.myButton {
+    background-color: #FBE3D6; 
+    border: none;
+    font-size: 1rem; 
+    padding: 10px 20px; 
+    border-radius: 15px;
+    color: #CC66FF; 
+    text-decoration: none; /* Quita el subrayado del enlace */
+    display: inline-block; /* Permite que el padding y otras propiedades de bloque funcionen */
+    transition: background-color 0.3s ease, color 0.3s ease, font-size 0.3s ease; /* Transiciones suaves para todos los cambios */
+}
+
+/* Estilos al pasar el ratón (hover) */
+.nav-item .nav-link.myButton:hover {
+    background-color: #CC66FF; 
+    color: #FBE3D6;
+    font-size: 1.1rem;
+}
+
+/* Estilo para el enlace activo (Home) */
+.nav-item .nav-link.active.myButton {
+
+    color: #CC66FF; /* O un color ligeramente diferente para el activo */
+    font-weight: bold; /* Hacer el texto más grueso para el activo */
+}
+
+
+/* Estilos para los íconos de usuario, corazón y carrito */
+.user-icons {
+    display: flex;
+    gap: 10px; /* Espacio entre los íconos */
+    align-items: center;
+}
+
+.user-icons .myButton {
+    background-color: transparent; /* Quita el fondo #FBE3D6 de estos botones */
+    border: none;
+    color: #CC66FF; /* Color de los íconos */
+    font-size: 1.5rem; /* Tamaño de los íconos */
+    padding: 5px; /* Ajusta el padding para los botones de íconos */
+    cursor: pointer; /* el apuntador del mouse se vuelve manito */
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.user-icons .myButton:hover {
+    background-color: transparent; 
+    color: #8A4F7D;
+    font-size: 1.6rem;
+}
+
+div .myButton1 {
+    background-color: #FBE3D6;
+    border: none;
+    font-size: 1rem;
+    padding: 30px;
+    border-radius: 15px;
+    color: #CC66FF;
+}
+
+div .myButton1:hover {
+    background-color: #CC66FF;
+    color: #FBE3D6;
+    font-size: 1.2rem;
+}
+
+.myTittle{
+    font-family: "Dancing Script", cursive;
+    font-size: 5rem;
+    color: #8A4F7D ;
+}
+
+p{
+    color: #4A4A4A;
+    font-size: 2rem;
+}
+
+/* --- Estilos para el carrusel y sus flechas --- */
+
+/* Color y tamaño para las flechas del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23CC66FF'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
+    /* Ajusta el tamaño de las flechas para hacerlas más prominentes */
+    width: 3rem !important;  
+    height: 3rem !important; 
+}
+
+/* Para la flecha "next", giramos la misma imagen */
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23CC66FF'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+
+/* Opcional: Color de fondo para las flechas al pasar el ratón para hacerlas aún más visibles */
+.carousel-control-prev,
+.carousel-control-next {
+    background: rgba(255, 255, 255, 0.2); /* Un fondo blanco semitransparente para destacarlas */
+    transition: background-color 0.3s ease;
+    width: 5%; /* Asegura que el área del botón sea lo suficientemente ancha */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: rgba(255, 255, 255, 0.4); /* Un poco más opaco al pasar el ratón */
+}
+
+
+
+/* Contenedor principal de los productos */
+.productos-categoria {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los productos horizontalmente */
+    gap: 50px; /* Espacio entre los productos */
+    max-width: 2000px; /* Ancho máximo del contenedor para que no se estire demasiado */
+    margin: 0 auto; /* Centra el contenedor completo en la página */
+}
+
+/* Estilo para cada producto individual */
+.producto-item {
+    background-color: #ffffff;
+    border: 1px solid #cc1987;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 0 0 calc(33.33% - 20px); /* Esto hace que cada producto ocupe 1/3 del ancho, restando el gap */
+    max-width: 500px; /* Ancho máximo para cada tarjeta de producto */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    display: flex; /* Para organizar el contenido interno (imagen y texto) */
+    flex-direction: column; /* Apila la imagen y la descripción verticalmente */
+    align-items: center; /* Centra la imagen y texto dentro del item */
+}
+
+.producto-item img {
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height:auto; /* Mantiene la proporción de la imagen */
+    border-radius: 4px; 
+    margin-bottom: 15px; /* Espacio entre la imagen y la descripción */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsionarse */
+    width: 700px; /* Ancho fijo para las imágenes si quieres uniformidad */
+    height: 700px; /* Altura fija para las imágenes si quieres uniformidad */
+}
+
+.producto-descripcion {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 0; /* Elimina el margen inferior predeterminado del párrafo */
+}
+
+
+.imghor1 {
+    background-color:#FBE3D6 ;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; /* Centers items vertically (useful if images have different heights) */
+    gap: 20px; 
+    padding: 50px; /* Padding inside the container, around the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Crucial for overall page alignment and responsiveness */
+   /* Optional: Limit the container width on very large screens */
+    margin: 20px auto; /* Centers the container itself on the page with vertical margins */
+    box-sizing: border-box; /* Includes padding in the total width of the container */
+}
+
+.imghor1 img {
+    max-width: 80%; /* Cada imagen toma hasta el 48% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen (¡Importante!) */
+    display: block; /* Removes any extra space below the image */
+    border-radius: 6px; /* Slightly rounded corners for the images themselves */
+    object-fit: cover; /* Ensures image fills its space without distortion, cropping if needed */
+}
+
+
+.cabeza{
+    background-color: #FBE3D6;
+    padding: 2px;
+    width: 100%;
+}
+
+.dropdown-item{
+    background-color: #FBE3D6;
+    border: none;
+    font-size: 1.7rem;
+    padding: 30px;
+    border-radius: 15px;
+    color: #CC66FF;
+}
+
+.dropdown-menu:hover{
+    background-color: #FBE3D6;
+    color: #FBE3D6;
+    font-size: 2rem;
+}
+
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .producto-item {
+        flex: 0 0 calc(50% - 20px); /* 2 productos por fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .producto-item {
+        flex: 0 0 calc(100% - 20px); /* 1 producto por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .imghor1 {
+        flex-direction: column; /* Stacks images vertically on smaller screens */
+        gap: 15px; /* Adjust gap when stacked */
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .imghor1 img {
+        max-width: 95%; /* Images take up more width when stacked */
+    }
+}

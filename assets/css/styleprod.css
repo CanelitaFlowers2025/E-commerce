@@ -1,0 +1,438 @@
+/*Estos son los estilos del header y nav*/
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Fredoka:wght@300..700&display=swap');
+
+*{  padding: 2px;
+    font-family: "Fredoka", sans-serif;
+    margin: 0;
+
+}
+
+body{
+    background-image: url("../recursos/imagenes/Background1.jpg");
+    background-size: cover;
+}
+
+.Line1{
+    display: flex;
+    background-color: #838abd;
+    font-family: "Dancing Script", cursive;
+    font-size: 2em;
+    color: #4A4A4A;
+    justify-content: center;
+    padding: 0px;
+    margin-top: 0px;
+    text-decoration: none;
+    
+}
+
+.cabeza{
+    background-color: #FBE3D6;
+    padding: 2px;
+    width: 100%;
+}
+
+/* Ajustes generales para el navbar-nav (el UL) */
+.navbar-nav {
+    list-style: none; /* Elimina las viñetas */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Asegura que los LI estén horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos de navegación */
+    gap: 15px; /* Espacio entre los elementos de navegación */
+}
+
+/* Estilos para los enlaces de navegación con la clase myButton */
+/* Esta es la CLAVE: para sobrescribir */
+
+.nav-item .nav-link.myButton {
+    background-color: #FBE3D6; /* Tu color de fondo para el "botón" */
+    border: none;
+    font-size: 1rem; /* Tamaño de fuente inicial */
+    padding: 10px 20px; /* Reduje el padding para que no sea tan grande como 30px en botones de navegación */
+    border-radius: 15px;
+    color: #CC66FF; /* ¡Este es el color de texto que quieres! */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    display: inline-block; /* Permite que el padding y otras propiedades de bloque funcionen */
+    transition: background-color 0.3s ease, color 0.3s ease, font-size 0.3s ease; /* Transiciones suaves para todos los cambios */
+}
+
+/* Estilos al pasar el ratón (hover) */
+.nav-item .nav-link.myButton:hover {
+    background-color: #CC66FF; /* Color de fondo al pasar el ratón */
+    color: #FBE3D6; /* Color del texto al pasar el ratón */
+    font-size: 1.1rem; /* Un poco más grande al pasar el ratón */
+}
+
+/* Estilo para el enlace activo (Home en tu caso) */
+.nav-item .nav-link.active.myButton {
+    /* Mantén tus estilos para el estado activo si deseas uno diferente */
+    /* Por ejemplo, un borde inferior, o un color más pronunciado */
+    color: #CC66FF; /* O un color ligeramente diferente para el activo */
+    font-weight: bold; /* Hacer el texto más grueso para el activo */
+}
+
+
+/* Estilos para los íconos de usuario, corazón y carrito */
+.user-icons {
+    display: flex;
+    gap: 10px; /* Espacio entre los íconos */
+    align-items: center;
+}
+
+.user-icons .myButton {
+    background-color: transparent; /* Quita el fondo #FBE3D6 de estos botones */
+    border: none;
+    color: #CC66FF; /* Color de los íconos */
+    font-size: 1.5rem; /* Tamaño de los íconos */
+    padding: 5px; /* Ajusta el padding para los botones de íconos */
+    cursor: pointer;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.user-icons .myButton:hover {
+    background-color: transparent; /* Asegura que no haya fondo al pasar el ratón */
+    color: #8A4F7D; /* Cambia el color de los íconos al pasar el ratón */
+    font-size: 1.6rem;
+}
+
+/* Estilos para la barra de búsqueda */
+.search-bar-container {
+    margin-right: 20px; /* Espacio entre la barra de búsqueda y los iconos de usuario */
+}
+
+#product-search {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px; /* Ajusta el ancho según tu diseño */
+    font-size: 1em;
+}
+
+
+/*Estos son los estilos para la pagina de productos*/
+.page-title {
+    text-align: center;
+    margin: 40px 0 30px;
+    color: #333;
+    font-size: 2.5em;
+}
+
+/* Contenedor de la cuadrícula de productos */
+.product-grid {
+    display: grid;
+    /* Adapta el número de columnas automáticamente. Min 280px, Max 1fr */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Espacio entre las tarjetas de producto */
+    max-width: 1200px; /* Ancho máximo del grid para centrarlo */
+    margin: 0 auto; /* Centra el grid horizontalmente */
+    padding: 30px; /* Espaciado interno */
+}
+
+/* Estilos para cada tarjeta de producto individual */
+.product-card {
+    background-color: #fff; /* Fondo blanco para la tarjeta */
+    border: 1px solid #e0e0e0; /* Borde suave */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave al pasar el ratón */
+    display: flex; /* Para organizar el contenido internamente */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+.product-card:hover {
+    transform: translateY(-8px); /* Efecto de "levantar" al pasar el ratón */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Estilos para las imágenes de los productos */
+.product-card img {
+    
+    max-width: 100%;; /* Asegura que la imagen no se desborde */
+    height: 500px; /* Altura fija para uniformidad */
+    object-fit: cover; /* Recorta la imagen para que cubra el espacio sin distorsión */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    margin-bottom: 20px;
+}
+
+/* Estilos para el nombre del producto */
+.product-card h3 {
+    margin: 10px 0 15px;
+    color: #333; /* Color de texto más oscuro */
+    font-size: 1.5em;
+    line-height: 1.3;
+}
+
+/* Estilos para el precio del producto */
+.product-card .product-price {
+    font-size: 1.6em; /* Precio más grande */
+    color: #28a745; /* Un color verde distintivo para el precio */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Contenedor para los elementos de acción (cantidad y botón) */
+.product-actions {
+    display: flex;
+    justify-content: center; /* Centra los elementos */
+    align-items: center; /* Alinea verticalmente */
+    gap: 10px; /* Espacio entre el input y el botón */
+    margin-top: auto; /* Empuja este contenedor hacia abajo en la tarjeta */
+}
+
+/* Estilos para el campo de entrada de cantidad */
+.quantity-input {
+    width: 70px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+
+    /* Ocultar las flechas para Chrome, Safari, Edge */
+    -webkit-appearance: none;
+    margin: 0; /* Asegura que no haya margen extra */
+
+    /* Ocultar las flechas para Firefox (versión estándar) */
+    -moz-appearance: textfield; /* A veces Firefox aún prefiere este prefijo para compatibilidad, aunque la advertencia es por el uso del prefijo -moz */
+    appearance: textfield; /* La propiedad estándar */
+}
+
+/* Regla adicional para asegurar la eliminación de las flechas en WebKit */
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Estilos para el botón "Comprar Ahora" */
+.add-to-cart-btn {
+    background-color: #007bff; /* Azul vibrante */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-grow: 1; /* Permite que el botón se expanda para llenar el espacio */
+    max-width: 180px; /* Ancho máximo para el botón */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+/* Media Queries para responsividad (ajusta según tus necesidades) */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .product-card {
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 2em;
+        margin: 30px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+        gap: 25px;
+        padding: 10px;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+
+    .product-card h3 {
+        font-size: 1.3em;
+    }
+
+    .product-card .product-price {
+        font-size: 1.4em;
+    }
+
+    .product-actions {
+        flex-direction: column; /* Apila el input y el botón verticalmente */
+        gap: 15px;
+    }
+
+    .quantity-input {
+        width: 100px; /* Un poco más ancho en móviles */
+    }
+}
+
+/* Oculta la sección del carrito por defecto */
+.cart-section {
+    display: none; /* Esto la oculta */
+    position: fixed; /* Para que flote sobre el contenido */
+    top: 100px; /* Ajusta según tu diseño para que no choque con el encabezado */
+    right: 20px; /* Posiciona a la derecha */
+    width: 400px; /* Ancho del carrito */
+    background-color: white;
+    border: 2px solid #CC66FF;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    max-height: 80vh; /* Altura máxima para que no se desborde */
+    overflow-y: auto; /* Agrega scroll si el contenido es muy largo */
+}
+
+/* Clase para mostrar el carrito con JavaScript */
+.cart-section.show {
+    display: block; /* Muestra el carrito cuando tiene la clase 'show' */
+}
+
+/* Estilos básicos para los ítems dentro del carrito (puedes ajustar) */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item button {
+    background-color: #dc3545; /* Rojo para el botón de eliminar */
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.cart-total {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    text-align: right;
+    font-size: 1.1em;
+}
+
+#clear-cart-btn {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #6c757d; /* Gris para el botón de vaciar */
+    color: white;
+}
+
+/* Estilos para el badge del carrito */
+.cart-badge {
+    background-color: #ff0000; /* Color rojo para la alerta */
+    color: white;
+    border-radius: 50%; /* Para que sea circular */
+    padding: 2px 6px; /* Espaciado interno */
+    font-size: 0.7em; /* Tamaño de la fuente */
+    position: absolute; /* Posicionamiento absoluto respecto a su padre (el botón) */
+    top: -5px; /* Ajusta la posición vertical */
+    right: -5px; /* Ajusta la posición horizontal */
+    min-width: 18px; /* Ancho mínimo para números de doble dígito */
+    text-align: center;
+    display: none; /* Oculto por defecto */
+}
+
+/* Para que el badge se posicione correctamente */
+#cart-icon-btn {
+    position: relative; /* Asegura que el cart-badge se posicione relativo a este botón */
+    display: inline-flex; /* Ayuda a centrar el icono y el badge si lo necesitas */
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Estilos para la "X" de cerrar el carrito --- */
+.close-cart-btn {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 10px; /* Distancia desde la parte superior */
+    right: 15px; /* Distancia desde la derecha */
+    font-size: 2em; /* Tamaño grande para que sea fácil de ver */
+    font-weight: bold;
+    cursor: pointer; /* Cambia el cursor a una mano cuando pasas por encima */
+    color: #333; /* Color oscuro */
+    transition: color 0.2s ease-in-out;
+}
+
+.close-cart-btn:hover {
+    color: #dc3545; /* Color rojo al pasar el ratón para indicar que es interactivo */
+}
+
+/* --- Estilos personalizados para el botón "Vaciar Carrito" dentro del carrito --- */
+/*
+   Esta regla es más específica y se aplicará al botón con la clase 'myButton'
+   cuando sea un descendiente del elemento con el ID 'cart-section'.
+   Esto sobrescribirá los estilos generales de .myButton para este botón en particular.
+*/
+#cart-section .myButton {
+    background-color: #FBE3D6;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 15px; /* Ajustado el padding para que no sea tan grande */
+    border-radius: 15px;
+    color: #CC66FF;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición para todos los cambios */
+    width: 100%; /* Para que ocupe todo el ancho del contenedor */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+    margin-top: 10px; /* Espacio superior */
+}
+
+#cart-section .myButton:hover {
+    background-color: #CC66FF;
+    color: #FBE3D6;
+    font-size: 1.1rem; /* Ligeramente más grande al pasar el ratón */
+    transform: scale(1.02); /* Pequeño efecto de escala */
+}
+
+/* Ajusta los estilos generales del cart-section si la "X" o el botón se ven apretados */
+.cart-section {
+    position: fixed;
+    /* ... otros estilos existentes ... */
+    padding: 20px; /* Asegura suficiente padding para los elementos internos */
+    padding-top: 40px; /* Más padding arriba para la "X" */
+}
+
+/* --- Estilos para el botón "Proceed to Checkout" dentro del carrito --- */
+.cart-section .checkout-btn {
+    background-color: #CC66FF; 
+    color: #FBE3D6; 
+    border: none;
+    font-size: 1.1rem;
+    padding: 12px 15px; /* Ajusta el padding para que se vea bien */
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%; /* Para que ocupe todo el ancho del contenedor del carrito */
+    box-sizing: border-box;
+    margin-top: 15px; /* Espacio entre el botón "Empty Car" y este */
+    text-align: center; /* Centrar el texto del enlace/botón */
+    display: block; /* Asegura que el <a> se comporte como un bloque para el width: 100% */
+    text-decoration: none; /* Quitar subrayado si es un enlace */
+    font-weight: bold; /* Hacer el texto más grueso */
+}
+
+.cart-section .checkout-btn:hover {
+    background-color: #8A4F7D; /* Morado más oscuro al pasar el ratón */
+    color: #FBE3D6;
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra al pasar el ratón */
+}

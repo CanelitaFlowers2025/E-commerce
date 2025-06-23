@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop-Canela-Sport</title>
+    <link rel="stylesheet" href="./css/styleprod.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    
+</head>
+
+
+ <!--Inicio de encabezado-->
+  <div class="Line1">
+    <img src="./recursos/imagenes/Logo.png" alt="" height="200px">
+  </div>
+
+<header class="cabeza">
+    <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container-fluid">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+                <li class="nav-item">
+                    <a class="nav-link active myButton" aria-current="page" href="./index.html">Home</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link myButton" href="./Producto.html" target="_self">Shop</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link myButton" href="./contact.html">Contact Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link myButton" href="./about.html">About us</a>
+                </li> 
+            </ul>
+
+            <div class="search-bar-container"> <input type="text" id="product-search" placeholder="Find products..." class="form-control">
+            </div>
+            
+            <div class="user-icons"> 
+                <a href="">
+                    <button class="myButton"><i class="fa-solid fa-user"></i></button>
+                </a>
+                <a href="">
+                    <button class="myButton"><i class="fa-solid fa-heart"></i></button>
+                </a>
+                <a href="#" id="cart-icon-link">
+                    <button class="myButton" id="cart-icon-btn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-badge" id="cart-count-badge">0</span> </button>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+<!--Fin de encabezado y barra de navegacion-->
+
+
+    
+
+<body class="product-page">
+
+     <main>
+        <h1 class="page-title">Our Products</h1>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="./recursos/imagenes/outfit1.jpg" alt="Producto 1 - Descripción">
+                <h3>Catalina Pink Seamless Sport Set</h3>
+                <p class="product-price">$180.000</p>
+                <div class="product-actions">
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="add-to-cart-btn">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./recursos/imagenes/outfit2.jpg" alt="Producto 2 - Descripción">
+                <h3>Amanda Blue Seamless Sport Set</h3>
+                <p class="product-price">$200.000</p>
+                <div class="product-actions">
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="add-to-cart-btn">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./recursos/imagenes/outfit3.jpg" alt="Producto 3 - Descripción">
+                <h3>Kimia Seamless Sport Set</h3>
+                <p class="product-price">$150.000</p>
+                <div class="product-actions">
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="add-to-cart-btn">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./recursos/imagenes/outfit4.jpg" alt="Producto 4 - Descripción">
+                <h3>Malva Red Seamless Sport Set</h3>
+                <p class="product-price">$250.000</p>
+                <div class="product-actions">
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="add-to-cart-btn">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./recursos/imagenes/outfit5.jpg" alt="Producto 5 - Descripción">
+                <h3>Sun Orange Seamless Sport Set</h3>
+                <p class="product-price">$150.000</p>
+                <div class="product-actions">
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="add-to-cart-btn">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./recursos/imagenes/outfit6.jpg" alt="Producto 6 - Descripción">
+                <h3>Brazilian Green Seamless Sport Set</h3>
+                <p class="product-price">$250.000</p>
+                <div class="product-actions">
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="add-to-cart-btn">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="cart-section" id="cart-section">
+              <h2>Your Shopping Car</h2>
+              <span class="close-cart-btn" id="close-cart-btn">&times;</span>
+              <div id="cart-items">
+                <p>Your cart is empty.</p>
+              </div>
+              
+              <div class="cart-total">
+                <strong>Total: $<span id="cart-total-price">0.00</span></strong>
+              </div>
+              <button id="clear-cart-btn" class="myButton">Empty Car</button>
+              <a href="./checkout.html" class="myButton checkout-btn">Checkout</a>
+
+            </div>
+
+        </div>
+        
+    </main>
+
+    <footer class="footer mt-auto py-3" style="background-color: #838abd;">
+  <div class="container text-center">
+    <span class="text-white">CANELA ROSE &copy; 2025</span>
+    <div class="mt-3">
+      <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-facebook fa-2x"></i></a>
+    </div>
+  </div>
+</footer>
+
+   <script src="./js/cart.js"></script>
+</body>
+
+</html>

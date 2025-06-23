@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Canela Sport</title>
+    <link rel="stylesheet" href="./css/contactus.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="cabeza-global">
+        <div class="Line1">
+            <img src="./recursos/imagenes/Logo.png" alt="Canela Sport Logo" height="200px">
+        </div>
+
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+                    <li class="nav-item">
+                        <a class="nav-link myButton" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link myButton" href="./Producto.html" target="_self">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active myButton" href="./contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link myButton" href="./about.html">About Us</a>
+                    </li> 
+                </ul>
+
+                <div class="search-bar-container"> 
+                    <input type="text" id="product-search" placeholder="Search products..." class="form-control">
+                </div>
+                
+                <div class="user-icons"> 
+                    <a href="">
+                        <button class="myButton"><i class="fa-solid fa-user"></i></button>
+                    </a>
+                    <a href="">
+                        <button class="myButton"><i class="fa-solid fa-heart"></i></button>
+                    </a>
+                    <a href="#" id="cart-icon-link">
+                        <button class="myButton" id="cart-icon-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart-badge" id="cart-count-badge">0</span> 
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="about-hero-section">
+            <div class="content-wrapper">
+                <h1>Let's Talk, We're Here for You!</h1>
+                <p>At **CANELA ROSE**, we value every voice. If you have questions, suggestions, or just want to say hello, don't hesitate to contact us. Your feedback is the engine of our improvement.</p>
+                <p>Our team is ready to help you with any inquiries about products, orders, or simply to provide you with an excellent customer service experience. Fill out the form or use the contact details below.</p>
+            </div>
+        </section>
+
+        <section class="about-section contact-form-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">Send Us a Message</h2>
+                <form action="#" method="POST" class="contact-form">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Full Name:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Enter your full name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address:</label>
+                        <input type="email" class="form-control" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="asunto" class="form-label">Subject:</label>
+                        <input type="text" class="form-control" id="asunto" name="asunto" required placeholder="Reason for your inquiry">
+                    </div>
+                    <div class="mb-4">
+                        <label for="mensaje" class="form-label">Your Message:</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="6" required placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn myButton submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="about-section contact-info-section">
+            <div class="content-wrapper text-center">
+                <h2 class="section-title">Or Contact Us Directly</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-card">
+                            <i class="fas fa-phone-alt fa-3x mb-3" style="color: #CC66FF;"></i>
+                            <h3>Phone</h3>
+                            <p><a href="tel:+573101234567" style="color: #666; text-decoration: none;">+57 310 123 4567</a></p>
+                            <p>(Monday to Friday, 9 AM - 6 PM)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-card">
+                            <i class="fas fa-envelope fa-3x mb-3" style="color: #CC66FF;"></i>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@canelarose.com" style="color: #666; text-decoration: none;">info@canelarose.com</a></p>
+                            <p>We'll reply within 24-48 business hours.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt fa-3x mb-3" style="color: #CC66FF;"></i>
+                            <h3>Address</h3>
+                            <p>Fictitious Street #123 - 45</p>
+                            <p>Bogotá, Colombia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer mt-auto py-3" style="background-color: #838abd;">
+        <div class="container text-center">
+            <span class="text-white">CANELA ROSE &copy; 2025</span>
+            <div class="mt-3">
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-facebook fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcZkH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"></script>
+    
+</body>
+</html>
